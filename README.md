@@ -26,11 +26,27 @@ Install:
 Chain Supported: moonbeam, moonriver
 
 ```
-const sdk = domainjs.SDK('moonbeam');
+const moonbeam = 
+{
+	"rpcUrl": "https://rpc.api.moonbeam.network/",
+	"contractAddress": "0x819B997a2f711eC1Ee998cB2DF5a6B2c4be1B575"		
+}
+
+const moonriver = 
+{
+	"rpcUrl": "https://rpc.api.moonriver.moonbeam.network",
+	"contractAddress": "0xa1019535e6b364523949eaf45f4b17521c1cb074"
+}
+// install
+	
+const sdk = domainchainjs.SDK('custom', moonbeam);
+// const sdk = domainchainjs.SDK('custom', moonriver);
+
 ```
 ```
 // your domains
-const _domain = "moonbeam.moon";
+const _domain = "moonbeam.moon"; // moonbeam.glmr
+//const _domain = "moonriver.movr";
 	
 // resolve domain to get the address of the owner.
 const owner = await sdk.getOwner(_domain);
