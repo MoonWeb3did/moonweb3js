@@ -38,11 +38,6 @@ const moonriver =
 	"contractAddress": "0xa1019535e6b364523949eaf45f4b17521c1cb074"
 }
 // install
-	
-const sdk = domainchainjs.SDK('custom', moonbeam);
-// const sdk = domainchainjs.SDK('custom', moonriver);
-
-```
 ```
 // your domains
 const _domain = "moonbeam.moon"; // moonbeam.glmr
