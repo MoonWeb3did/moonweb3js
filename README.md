@@ -37,8 +37,7 @@ const moonriver =
 	"rpcUrl": "https://rpc.api.moonriver.moonbeam.network",
 	"contractAddress": "0xa1019535e6b364523949eaf45f4b17521c1cb074"
 }
-// install
-```
+
 // your domains
 const _domain = "moonbeam.moon"; // moonbeam.glmr
 //const _domain = "moonriver.movr";
