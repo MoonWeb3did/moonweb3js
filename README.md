@@ -23,7 +23,7 @@ const domainchainjs = require('domainchainjs');
 
 Install:
 
-Chain Supported: moonbeam, moonriver
+Chain Supported: moonbeam, moonriver, bobabeam
 
 ```
 const moonbeam = 
@@ -38,12 +38,20 @@ const moonriver =
 	"contractAddress": "0xa1019535e6b364523949eaf45f4b17521c1cb074"
 }
 
+const bobabeam = 
+{
+	"rpcUrl": "https://bobabeam.boba.network/",
+	"contractAddress": "0xa1019535e6b364523949eaf45f4b17521c1cb074"
+}
+
 const sdk = domainjs.SDK('custom', moonbeam); 
 //const sdk = domainjs.SDK('custom', moonriver); 
+//const sdk = domainjs.SDK('custom', bobabeam); 
 
 // your domains
-const _domain = "moonbeam.moon"; // moonbeam.glmr
+const _domain = "moonbeam.moon"; // moonbeam.glmr // bobabeam.boba
 //const _domain = "moonriver.movr";
+//const _domain = "bobabeam.boba";
 	
 // resolve domain to get the address of the owner.
 const owner = await sdk.getOwner(_domain);
